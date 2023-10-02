@@ -26,7 +26,7 @@ import changed from 'gulp-changed';
 import concat from 'gulp-concat';
 import rsync from 'gulp-rsync';
 import { deleteAsync } from 'del';
-import { ghPages } from 'gulp-gh-pages';
+import ghPages from 'gulp-gh-pages';
 // const path = require('https://github.com/AlexandraKuraeva/internet-lab.git');
 
 function browsersync() {
@@ -124,9 +124,9 @@ async function cleandist() {
   await deleteAsync('dist/**/*', { force: true });
 }
 
-gulp.task('deploy', function () {
-  return gulp.src('./dist/**/*').pipe(ghPages());
-});
+function deploy() {
+  return gulp.src('dist/***').pipe(ghPages());
+}
 
 function startwatch() {
   watch(`app/styles/${preprocessor}/**/*`, { usePolling: true }, styles);
