@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <title>internetLab</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <link rel="stylesheet" href="css/app.min.css" />
+    <script defer src="js/app.min.js"></script>
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <nav class="header__top-line js-simplebar">
+          <a href="#" class="header__logo logo">
+            <img class="logo__light" src="./images/dist/logo.svg" alt />
+            <img class="logo__dark" src="./images/dist/logo_d.svg" alt />
+          </a>
+          <div id="burger-toggle" class="burger-menu">
+            <span></span>
+          </div>
+          <div class="header__nav">
+            <ul class="header__menu menu">
+              <li class="menu__item">
+                <a href="#" class="menu__link">Как это работает</a>
+                <span class="menu__icon-arrow"></span>
+              </li>
+              <li class="menu__item">
+                <a href="#" class="menu__link">3-й блок</a><span class="menu__icon-arrow"></span>
+              </li>
+              <li class="menu__item">
+                <a href="#" class="menu__link">Вопросы и ответы</a
+                ><span class="menu__icon-arrow"></span>
+              </li>
+              <li class="menu__item">
+                <a href="#" class="menu__link">Форма</a><span class="menu__icon-arrow"></span>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <div class="page-content">
+        <section class="banner">
+          <div class="banner__bg">
+            <picture>
+              <source
+                media="(min-width: 1400px)"
+                srcset="./images/dist/bg_full.jpg"
+                type="image/jpg"
+              />
+              <source
+                media="(min-width: 768px)"
+                srcset="./images/dist/bg_768.jpg"
+                type="image/jpg"
+              />
+              <source
+                media="(min-width: 375px)"
+                srcset="./images/dist/bg_375.jpg"
+                type="image/jpg"
+              />
+              <source srcset="./images/dist/bg_320.jpg" type="image/jpg" />
+              <img src="./images/dist/bg_full.jpg" alt="" />
+            </picture>
+          </div>
+          <div class="banner__content">
+            <div class="container">
+              <div class="banner__content-inner">
+                <h1 class="banner__title">Говорят, никогда не поздно сменить профессию</h1>
+                <p class="banner__subtitle">Сделай круто тестовое задание и у тебя получится</p>
+                <button class="banner__btn">Проще простого!</button>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="default-section plan">
+          <div class="container">
+            <h2 class="plan__title title">Как это работает</h2>
+            <ul class="plan__list">
+              <li class="plan__item">
+                <div class="plan__img">
+                  <img src="./images/dist/plan1.svg" alt="" />
+                </div>
+                <div class="plan__right">
+                  <h6 class="plan__subtitle">Прочитай задание внимательно</h6>
+                  <p class="plan__txt">Думаю у тебя не займет это больше двух-трех минут</p>
+                </div>
+              </li>
+              <li class="plan__item">
+                <div class="plan__img">
+                  <img src="./images/dist/plan2.svg" alt="" />
+                </div>
+                <div class="plan__right">
+                  <h6 class="plan__subtitle">Изучи весь макет заранее</h6>
+                  <p class="plan__txt">
+                    Подумай как это будет работать на разных разрешениях и при скролле
+                  </p>
+                </div>
+              </li>
+              <li class="plan__item">
+                <div class="plan__img">
+                  <img src="./images/dist/plan3.svg" alt="" />
+                </div>
+                <div class="plan__right">
+                  <h6 class="plan__subtitle">Сделай хорошо</h6>
+                  <p class="plan__txt">Чтобы мы могли тебе доверить подобные задачи в будущем</p>
+                </div>
+              </li>
+              <li class="plan__item">
+                <div class="plan__img">
+                  <img src="./images/dist/plan4.svg" alt="" />
+                </div>
+                <div class="plan__right">
+                  <h6 class="plan__subtitle">Получи предложение</h6>
+                  <p class="plan__txt">
+                    Ну тут все просто, не я придумал правила, но думаю так и будет)))
+                  </p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </section>
+        <section class="default-section third-block">
+          <div class="container">
+            <div class="third-block__row">
+              <div class="third-block__img">
+                <picture>
+                  <source
+                    media="(min-width: 1400px)"
+                    srcset="./images/dist/third_full.jpg"
+                    type="image/jpg"
+                  />
+                  <source
+                    media="(min-width: 768px)"
+                    srcset="./images/dist/third768.jpg"
+                    type="image/jpg"
+                  />
+                  <source
+                    media="(min-width: 375px)"
+                    srcset="./images/dist/third375.jpg"
+                    type="image/jpg"
+                  />
+                  <source srcset="./images/dist/third320.jpg" type="image/jpg" />
+                  <img src="./images/dist/third_full.jpg" alt="" />
+                </picture>
+              </div>
+              <div class="third-block__txt">
+                <h3 class="third-block__title">Круто, ты дошел до третьего блока</h3>
+                <p class="third-block__p">
+                  63% опрошенных пользовались кредитами из-за того, что не могли покрыть
+                  непредвиденные расходы свыше 15 000 ₽.
+                </p>
+                <p class="third-block__p">
+                  Доступ к заработанным деньгам помогает отказаться от кредитов и экономить деньги
+                  на процентах и штрафах.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="default-section feedback-slider">
+          <div class="container">
+            <h2 class="feedback-slider__title title">Отзывы</h2>
+            <div class="feedback-slider__wrapper">
+              <div class="swiper feedback-slider__swiper">
+                <div class="swiper-wrapper">
+                  <!-- Slides -->
+                  <div class="swiper-slide slide-review">
+                    <div class="slide-review__container">
+                      <div class="slide-review__top">
+                        <div class="slide-review__avatar">
+                          <img src="./images/dist/avatar1.jpg" alt="" />
+                        </div>
+                        <div class="slide-review__info-av">
+                          <p class="slide-review__name">Константинов Михаил Павлович</p>
+                          <p class="slide-review__address">Санкт-Петербург</p>
+                        </div>
+                      </div>
+                      <p class="slide-review__content">
+                        Каждый из нас понимает очевидную вещь: перспективное планирование
+                        предоставляет широкие возможности для анализа существующих паттернов
+                        поведения. В своём стремлении улучшить пользовательский опыт мы
+                      </p>
+                    </div>
+                  </div>
+                  <div class="swiper-slide slide-review">
+                    <div class="slide-review__container">
+                      <div class="slide-review__top">
+                        <div class="slide-review__avatar">
+                          <img src="./images/dist/avatar2.jpg" alt="" />
+                        </div>
+                        <div class="slide-review__info-av">
+                          <p class="slide-review__name">Иван Иванов</p>
+                          <p class="slide-review__address">Санкт-Петербург</p>
+                        </div>
+                      </div>
+                      <p class="slide-review__content">
+                        Каждый из нас понимает очевидную вещь: перспективное планирование
+                        предоставляет широкие возможности для анализа существующих паттернов
+                        поведения. В своём стремлении улучшить пользовательский опыт мы упускаем,
+                        что активно развивающиеся страны третьего мира призваны к ответу.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="swiper-slide slide-review">
+                    <div class="slide-review__container">
+                      <div class="slide-review__top">
+                        <div class="slide-review__avatar">
+                          <img src="./images/dist/avatar3.jpg" alt="" />
+                        </div>
+                        <div class="slide-review__info-av">
+                          <p class="slide-review__name">Артем Корнилов</p>
+                          <p class="slide-review__address">Самара</p>
+                        </div>
+                      </div>
+                      <p class="slide-review__content">
+                        Каждый из нас понимает очевидную вещь: перспективное планирование
+                        предоставляет широкие возможности для анализа существующих паттернов
+                        поведения.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="swiper-slide slide-review">
+                    <div class="slide-review__container">
+                      <div class="slide-review__top">
+                        <div class="slide-review__avatar">
+                          <img src="./images/dist/avatar2.jpg" alt="" />
+                        </div>
+                        <div class="slide-review__info-av">
+                          <p class="slide-review__name">Иван Иванов</p>
+                          <p class="slide-review__address">Санкт-Петербург</p>
+                        </div>
+                      </div>
+                      <p class="slide-review__content">
+                        Каждый из нас понимает очевидную вещь: перспективное планирование
+                        предоставляет широкие возможности для анализа существующих паттернов
+                        поведения. В своём стремлении улучшить пользовательский опыт мы
+                      </p>
+                    </div>
+                  </div>
+                  <div class="swiper-slide slide-review">
+                    <div class="slide-review__container">
+                      <div class="slide-review__top">
+                        <div class="slide-review__avatar">
+                          <img src="./images/dist/avatar3.jpg" alt="" />
+                        </div>
+                        <div class="slide-review__info-av">
+                          <p class="slide-review__name">Артем Корнилов</p>
+                          <p class="slide-review__address">Самара</p>
+                        </div>
+                      </div>
+                      <p class="slide-review__content">
+                        Каждый из нас понимает очевидную вещь: перспективное планирование
+                        предоставляет широкие возможности для анализа существующих паттернов
+                        поведения.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-btn">
+                <div class="swiper-button-prev feedback-slider__btn-prev">
+                  <img src="./images/dist/sw-btn.svg" alt="" />
+                </div>
+                <div class="swiper-button-next feedback-slider__btn-next">
+                  <img src="./images/dist/sw-btn.svg" alt="" />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="feedback-slider__pagination"><div class="swiper-pagination"></div></div>
+        </section>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="footer__wr">
+        <div class="container"><p>© 2021 Лаборатория интернет</p></div>
+      </div>
+    </footer>
+  </body>
+</html>
