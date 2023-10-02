@@ -1,5 +1,5 @@
 let preprocessor = 'sass',
-	 fileswatch = 'html,htm,txt,json,md,woff2';
+  fileswatch = 'html,htm,txt,json,md,woff2';
 
 import pkg from 'gulp';
 const { gulp, src, dest, parallel, series, watch } = pkg;
@@ -13,8 +13,8 @@ import TerserPlugin from 'terser-webpack-plugin';
 import gulpSass from 'gulp-sass';
 import dartSass from 'sass';
 import sassglob from 'gulp-sass-glob';
-const sass = gulpSass(dartSass);
-
+// const sass = gulpSass(dartSass);
+const sass = require('gulp-sass')(require('sass'));
 import less from 'gulp-less';
 import lessglob from 'gulp-less-glob';
 import styl from 'gulp-stylus';
@@ -27,6 +27,8 @@ import changed from 'gulp-changed';
 import concat from 'gulp-concat';
 import rsync from 'gulp-rsync';
 import { deleteAsync } from 'del';
+// import { ghPages } from 'gulp-gh-pages';
+// const path = require('https://github.com/AlexandraKuraeva/internet-lab.git');
 
 function browsersync() {
   browserSync.init({
@@ -123,23 +125,8 @@ async function cleandist() {
   await deleteAsync('dist/**/*', { force: true });
 }
 
-function deploy() {
-  return src('dist/').pipe(
-    rsync({
-      root: 'dist/',
-      hostname: 'https://github.com/AlexandraKuraeva/internet-lab.git',
-      destination: 'yousite/public_html/',
-      clean: true, // Mirror copy with file deletion
-      include: [
-        /* '*.htaccess' */
-      ], // Included files to deploy,
-      exclude: ['**/Thumbs.db', '**/*.DS_Store'],
-      recursive: true,
-      archive: true,
-      silent: false,
-      compress: true,
-    }),
-  );
+function deploy(cd) {
+  ghPages.publish(path.join(process.cwd(), './dist'), cb);
 }
 
 function startwatch() {
