@@ -13,11 +13,10 @@ import TerserPlugin from 'terser-webpack-plugin';
 import gulpSass from 'gulp-sass';
 import dartSass from 'sass';
 import sassglob from 'gulp-sass-glob';
-// const sass = gulpSass(dartSass);
-const sass = require('gulp-sass')(require('sass'));
-import less from 'gulp-less';
+const sass = gulpSass(dartSass);
+
 import lessglob from 'gulp-less-glob';
-import styl from 'gulp-stylus';
+
 import stylglob from 'gulp-noop';
 import postCss from 'gulp-postcss';
 import cssnano from 'cssnano';
@@ -27,7 +26,7 @@ import changed from 'gulp-changed';
 import concat from 'gulp-concat';
 import rsync from 'gulp-rsync';
 import { deleteAsync } from 'del';
-// import { ghPages } from 'gulp-gh-pages';
+import { ghPages } from 'gulp-gh-pages';
 // const path = require('https://github.com/AlexandraKuraeva/internet-lab.git');
 
 function browsersync() {
@@ -125,9 +124,9 @@ async function cleandist() {
   await deleteAsync('dist/**/*', { force: true });
 }
 
-function deploy(cd) {
-  ghPages.publish(path.join(process.cwd(), './dist'), cb);
-}
+gulp.task('deploy', function () {
+  return gulp.src('./dist/**/*').pipe(ghPages());
+});
 
 function startwatch() {
   watch(`app/styles/${preprocessor}/**/*`, { usePolling: true }, styles);
